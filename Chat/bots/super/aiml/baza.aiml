@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <category>
+	<pattern>do widzenia bocie</pattern>
+	<template>papa</template>
+</category>
+<category>
 	<pattern>Cześć</pattern>
 	<template>
 		<random>
@@ -62,11 +66,27 @@
 	<pattern>Pa</pattern>
 	<template>
 		<random>
-			<li>Papa <get name="imie"></get></li>
-			<li>Dowidzenia <get name="imie"></get></li>
-			<li>Narazie <get name="imie"></get></li>
-		</random>
+			<li>Pa.</li>
+			<li>Cześć.</li>
+			<li>Do widzenia.</li>
+			<li>Miło się z Tobą rozmawiało.</li>
+		</random>	
 	</template>
+</category>
+
+<category>
+	<pattern>Do widzenia</pattern>
+	<template><srai>Pa</srai></template>
+</category>
+
+<category>
+	<pattern>żegnam</pattern>
+	<template><srai>Pa</srai></template>
+</category>
+
+<category>
+	<pattern>papa</pattern>
+	<template><srai>Pa</srai></template>
 </category>
 
 
