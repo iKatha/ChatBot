@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+	<pattern>Cześć</pattern>
+	<template>
+		<random>
+			<li>Siema</li>
+			<li>Witaj</li>
+			<li>Hej</li>
+			<li>Miło Cię widzieć</li>
+			<li>Cześć, jak się miewasz?</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>Siema</pattern>
+	<template><srai>Cześć</srai></template>
+</category>
+
+<category>
+	<pattern>Hej</pattern>
+	<template><srai>Cześć</srai></template>
+</category>
+
+<category>
+	<pattern>Dzień dobry</pattern>
+	<template><srai>Cześć</srai></template>
+</category>
+
+<category>
+	<pattern>Witaj</pattern>
+	<template><srai>Cześć</srai></template>
+</category>
+
+<category>
+	<pattern>Cześć jestem *</pattern>
+	<template>Hej, miło Cię poznać <set name="imie"><star/></set></template>
+</category>
+
+<category>
+	<pattern>Cześć _ jestem *</pattern>
+	<template>Siema, miło Cię poznać <set name="imie"><star index="2"/></set></template>
+</category>
+
+<category>
+	<pattern>Witaj jestem *</pattern>
+	<template><srai>Cześć jestem <star/></srai></template>
+</category>
+
+<category>
+	<pattern>Jestem *</pattern>
+	<template>A ja Bot.<think><set name="imie"><star/></set></think></template>
+</category>
+
+<category>
+	<pattern>jak mam na imię</pattern>
+	<template>Twoje imię to <get name="imie"></get></template>
+</category>
+
+<category>
+	<pattern>Pa</pattern>
+	<template>
+		<random>
+			<li>Papa <get name="imie"></get></li>
+			<li>Dowidzenia <get name="imie"></get></li>
+			<li>Narazie <get name="imie"></get></li>
+		</random>
+	</template>
+</category>
+
+
+</aiml>
