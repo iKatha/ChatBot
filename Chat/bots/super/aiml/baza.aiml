@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 <category>
+	<pattern>cześć</pattern>
+	<template>czesc</template>
+</category>
+<category>
 	<pattern>do widzenia bocie</pattern>
 	<template>papa</template>
 </category>

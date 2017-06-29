@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Chat/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="D:/Studia/si/biblioteki/program-ab-0.0.4.2/lib/Ab.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,5 +1,3 @@
-
-
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -75,7 +73,7 @@ public class Okno {
 					chat=textArea.getText();
 					if(flag) {
 						template=request;
-						Path path = Paths.get("C:\\Users\\Kasia\\git\\ChatBot\\Chat\\bots\\super\\aiml\\baza.aiml");
+						Path path = Paths.get("Chat/bots/super/aiml/baza.aiml");
 						List<String> lines;
 						try {
 							lines = Files.readAllLines(path, StandardCharsets.UTF_8);

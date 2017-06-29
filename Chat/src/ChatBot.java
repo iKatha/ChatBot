@@ -1,5 +1,3 @@
-
-
 import java.awt.EventQueue;
 
 import org.alicebot.ab.Bot;
