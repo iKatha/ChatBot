@@ -3,5 +3,10 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="lib" path="D:/JavaBiblioteki/Ab.jar"/>
+	<classpathentry kind="lib" path="D:/JavaBiblioteki/jfuzzylite-6.0/jfuzzylite-6.0.jar" sourcepath="D:/JavaBiblioteki/jfuzzylite-6.0/jfuzzylite-6.0-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/D:/JavaBiblioteki/jfuzzylite-6.0/jfuzzylite-6.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

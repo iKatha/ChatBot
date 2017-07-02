@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+
 <category>
-	<pattern>cześć</pattern>
-	<template>czesc</template>
+	<pattern>jaki jest Twój ulubiony zawodnik</pattern>
+	<template>Paul Pierce.</template>
+</category>
+<category>
+	<pattern>co to znaczy NBA</pattern>
+	<template>To skrót od National Basketball Association.</template>
+</category>
+<category>
+	<pattern>co robisz w wolnym czasie</pattern>
+	<template>Oglądam NBA.</template>
+</category>
+<category>
+	<pattern>jakie jest Twoje hobby</pattern>
+	<template>Zdecydowanie koszykówka!</template>
+</category>
+
+<category>
+	<pattern>Jaka jest Twoja ulubiona drużyna</pattern>
+	<template>Boston Celtics</template>
+</category>
+<category>
+	<pattern>Lubisz mnie</pattern>
+	<template>Tak!</template>
+</category>
+<category>
+	<pattern>Kocham Cię</pattern>
+	<template>Nie za wcześnie na takie wyznania..?</template>
 </category>
 <category>
 	<pattern>do widzenia bocie</pattern>
@@ -61,6 +87,12 @@
 	<template>A ja Bot.<think><set name="imie"><star/></set></think></template>
 </category>
 
+
+<category>
+	<pattern>Mam na imię *</pattern>
+	<template><srai>Jestem <star/></srai></template>
+</category>
+
 <category>
 	<pattern>jak mam na imię</pattern>
 	<template>Twoje imię to <get name="imie"></get></template>
@@ -93,5 +125,266 @@
 	<template><srai>Pa</srai></template>
 </category>
 
+<category>
+	<pattern>Lubię *</pattern>
+	<template>
+		<random>
+			<li>Hmm..</li>
+			<li>Oh, tak samo jak ja..</li>
+			<li>Aha.</li>
+			<li>Dlaczego?</li>
+			<li>Super!</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>Nie lubię *</pattern>
+	<template><srai>lubię <star/></srai></template>
+</category>
+
+<category>
+	<pattern>* * rzucił * punktów</pattern>
+	<template>
+		sprawdz punkty
+		<think><set name = "topic">koszykówka</set></think>
+		<think><set name="k_imie"><star index="1"/></set></think>
+		<think><set name="punkty"><star index="3"/></set></think>
+		<think><set name="k_nazwisko"><star index="2"/></set></think>	
+	</template>
+</category>
+
+<category>
+	<pattern>isOk</pattern>
+	<template>
+		<random>
+			<li>Interesujące...</li>
+			<li>To ciekawe...</li>
+			<li>Może powiesz coś więcej?</li>
+			<li>Bardzo lubię tego zawodnika.</li>
+			<li>Oh.</li>
+			<li>Czy wygrali?</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>rzucił * punktów</pattern>
+	<template>
+		sprawdz punkty
+		<think><set name = "topic">koszykówka</set></think>
+		<think><set name="punkty"><star/></set></think>		
+	</template>
+</category>
+
+<category>
+	<pattern>rzucił * punkty</pattern>	
+	<template><srai>rzucił <star/> punktów</srai></template>
+</category>
+
+<category>
+	<pattern>* * rzucił * punkty</pattern>	
+	<template><srai><star index="1"/> <star index="2"/> rzucił <star index="3"/> punktów</srai></template>
+</category>
+
+<category>
+	<pattern>tak</pattern>
+	<that>Czy wygrali</that>
+	<template>
+		<random>
+			<li>To super!</li>
+			<li>Cieszę się.</li>
+			<li>:D</li>
+		</random>
+	</template>
+</category>
+
+
+<category>
+	<pattern>nie</pattern>
+	<that>Czy wygrali</that>
+	<template>
+		<random>
+			<li>To szkoda...</li>
+			<li>Przykro mi.</li>
+			<li>:(</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>* * miał * asyst</pattern>
+	<template>
+		sprawdz asysty
+		<think><set name = "topic">koszykówka</set></think>
+		<think><set name="k_imie"><star index="1"/></set></think>
+		<think><set name="asysty"><star index="3"/></set></think>
+		<think><set name="k_nazwisko"><star index="2"/></set></think>
+	</template>
+</category>
+
+<category>
+	<pattern>miał * asyst</pattern>
+	<template>
+		sprawdz asysty
+		<think><set name = "topic">koszykówka</set></think>	
+		<think><set name="asysty"><star/></set></think>
+	</template>
+</category>
+
+<category>
+	<pattern>miał * asysty</pattern>
+	<template>
+		<srai>miał <star/> asyst</srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* * miał * asysty</pattern>
+	<template><srai><star index="1"/> <star index="2"/> miał <star index="3"/> asyst</srai></template>
+</category>
+
+<category>
+	<pattern>* * miał * zbiórki</pattern>
+	<template>
+		sprawdz zbiorki
+		<think><set name = "topic">koszykówka</set></think>
+		<think><set name="k_imie"><star index="1"/></set></think>
+		<think><set name="zbiorki"><star index="3"/></set></think>
+		<think><set name="k_nazwisko"><star index="2"/></set></think>
+	</template>
+</category>
+
+<category>
+	<pattern>miał * zbiórki</pattern>
+	<template>
+		sprawdz zbiorki	
+		<think><set name = "topic">koszykówka</set></think>	
+		<think><set name="zbiorki"><star/></set></think>		
+	</template>
+</category>
+
+<category>
+	<pattern>miał * zbiórek</pattern>
+	<template><srai>miał <star/> zbiórki</srai></template>
+</category>
+
+<category>
+	<pattern>* * miał * zbiórek</pattern>
+	<template><srai><star index="1"/> <star index="2"/> miał <star index="3"/> zbiórki</srai></template>
+</category>
+
+
+<category>
+	<pattern>Ile punktów rzucił _</pattern>
+	<template> <get name="k_imie"></get> <get name="k_nazwisko"></get> rzucił <get name="punkty"></get> </template>
+</category>
+
+<category>
+	<pattern>bad</pattern>
+	<template>
+		<random>
+			<li>To słabo mu poszło...</li>
+			<li>Nie najlepie :/</li>
+			<li>Słabiutkooo!</li>
+			<li>Zagrałbym lepiej!</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>average</pattern>
+	<template>
+		<random>
+			<li>To całkiem przyzwoicie.</li>
+			<li>Dobrze mu poszło.</li>
+			<li>Może być.</li>
+			<li>Chyba ok..</li>
+			<li>Tak sobie.</li>
+		</random>
+	</template>
+</category>
+
+<category>
+	<pattern>good</pattern>
+	<template>
+		<random>
+			<li>Wow! Świetny zawodnik</li>
+			<li>Super mecz!</li>
+			<li>Musiało byc genialne widowisko</li>
+			<li>Jestem pod wielkim wrażeniem!</li>
+		</random>
+	</template>
+</category>
+
+<topic name = "koszykówka">
+
+<category>
+	<pattern>zapytaj o imię</pattern>
+	<template>A jak się nazywa?</template>
+</category>
+
+<category>
+	<pattern>* *</pattern>
+	<that>A jak się nazywa</that>
+	<template><think><set name="k_imie"><star index="1"/></set><set name="k_nazwisko"><star index="2"/></set></think>ocena koszykarza</template>
+</category>
+
+<category>
+	<pattern>Co sądzisz o tym zawodniku</pattern>
+	<template>ocena koszykarza</template>
+</category>
+
+<category>
+	<pattern>Co sądzisz o tym koszykarzu</pattern>
+	<template>ocena koszykarza</template>
+</category>
+
+<category>
+	<pattern>Co o nim sądzisz</pattern>
+	<template>ocena koszykarza</template>
+</category>
+
+
+<category>
+	<pattern>Co o nim myślisz</pattern>
+	<template>ocena koszykarza</template>
+</category>
+</topic>
+
+<category>
+	<pattern>get</pattern>
+	<template><get name="imie"></get>;<get name="k_imie"></get>;<get name="k_nazwisko"></get>;<get name="asysty"></get>;<get name="punkty"></get>;<get name="zbiorki"></get></template>
+</category>
+
+<category>
+	<pattern>setImie *</pattern>
+	<template><think><set name="imie"><star/></set></think></template>
+</category>
+
+<category>
+	<pattern>setKImie *</pattern>
+	<template><think><set name="k_imie"><star/></set></think></template>
+</category>
+
+<category>
+	<pattern>setKNazwisko *</pattern>
+	<template><think><set name="k_nazwisko"><star/></set></think></template>
+</category>
+
+<category>
+	<pattern>setAsysty *</pattern>
+	<template><think><set name="asysty"><star/></set></think></template>
+</category>
+
+<category>
+	<pattern>setZbiorki *</pattern>
+	<template><think><set name="zbiorki"><star/></set></think></template>
+</category>
+
+<category>
+	<pattern>setPunkty *</pattern>
+	<template><think><set name="punkty"><star/></set></think></template>
+</category>
 
 </aiml>
