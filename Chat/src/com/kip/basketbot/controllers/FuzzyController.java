@@ -164,8 +164,5 @@ public class FuzzyController {
 		return response;
 	}
 
-	public static void main(String[] args) {
-		FuzzyController fc = new FuzzyController("10","50","15");
-		fc.playerStats();
-	}
+	
 }

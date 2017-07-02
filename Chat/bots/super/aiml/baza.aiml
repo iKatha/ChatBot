@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+<category>
+	<pattern>Co robiłeś wczoraj wieczorem</pattern>
+	<template>Oglądałem mecz NBA.</template>
+</category>
 
 <category>
 	<pattern>Często grasz w kosza</pattern>

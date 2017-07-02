@@ -26,10 +26,10 @@ public class ChatController {
 					response = "A ile miał asyst?";
 					break;
 				case 4:
-					response = "Muszę wiedzieć ile miał zbiórek.";
+					response = "Powiedz jeszcze ile zdobył punktów.";
 					break;
 				case 5:
-					response = "Powiedz jeszcze ile zdobył punktów.";
+					response = "Muszę wiedzieć ile miał zbiórek.";
 					break;
 				}
 				break;
