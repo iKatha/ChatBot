@@ -39,7 +39,7 @@ public class ChatController {
 	}
 
 	static public void learn(String pattern, String template) throws IOException {
-		Path path = Paths.get("C:\\Users\\Kasia\\git\\ChatBot\\Chat\\bots\\super\\aiml\\baza.aiml");
+		Path path = Paths.get(".\\bots\\super\\aiml\\baza.aiml");
 		List<String> lines;
 		lines = Files.readAllLines(path, StandardCharsets.UTF_8);
 		int position = 2;

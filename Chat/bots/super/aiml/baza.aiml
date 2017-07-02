@@ -2,6 +2,15 @@
 <aiml>
 
 <category>
+	<pattern>Często grasz w kosza</pattern>
+	<template>Tak.</template>
+</category>
+<category>
+	<pattern>Znasz się na koszykówce</pattern>
+	<template>Oczywiście!</template>
+</category>
+
+<category>
 	<pattern>jaki jest Twój ulubiony zawodnik</pattern>
 	<template>Paul Pierce.</template>
 </category>
@@ -154,6 +163,7 @@
 	</template>
 </category>
 
+
 <category>
 	<pattern>isOk</pattern>
 	<template>
@@ -185,6 +195,26 @@
 <category>
 	<pattern>* * rzucił * punkty</pattern>	
 	<template><srai><star index="1"/> <star index="2"/> rzucił <star index="3"/> punktów</srai></template>
+</category>
+
+<category>
+	<pattern>rzucił * punkt</pattern>	
+	<template><srai>rzucił <star/> punktów</srai></template>
+</category>
+
+<category>
+	<pattern>* * rzucił * punkt</pattern>	
+	<template><srai><star index="1"/> <star index="2"/> rzucił <star index="3"/> punktów</srai></template>
+</category>
+
+<category>
+	<pattern>* * nie zdobył żadnych punktów</pattern>	
+	<template><srai><star index="1"/> <star index="2"/> rzucił 0 punktów</srai></template>
+</category>
+
+<category>
+	<pattern>nie zdobył żadnych punktów</pattern>	
+	<template><srai>rzucił 0 punktów</srai></template>
 </category>
 
 <category>
@@ -245,6 +275,30 @@
 </category>
 
 <category>
+	<pattern>nie miał żadnych asyst</pattern>
+	<template>
+		<srai>miał 0 asyst</srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* * nie miał żadnych asyst</pattern>
+	<template><srai><star index="1"/> <star index="2"/> miał 0 asyst</srai></template>
+</category>
+
+<category>
+	<pattern>miał * asystę</pattern>
+	<template>
+		<srai>miał <star/> asyst</srai>
+	</template>
+</category>
+
+<category>
+	<pattern>* * miał * asystę</pattern>
+	<template><srai><star index="1"/> <star index="2"/> miał <star index="3"/> asyst</srai></template>
+</category>
+
+<category>
 	<pattern>* * miał * zbiórki</pattern>
 	<template>
 		sprawdz zbiorki
@@ -271,6 +325,26 @@
 
 <category>
 	<pattern>* * miał * zbiórek</pattern>
+	<template><srai><star index="1"/> <star index="2"/> miał <star index="3"/> zbiórki</srai></template>
+</category>
+
+<category>
+	<pattern>nie miał żadnych zbiórek</pattern>
+	<template><srai>miał 0 zbiórki</srai></template>
+</category>
+
+<category>
+	<pattern>* * nie miał żadnych zbiórek</pattern>
+	<template><srai><star index="1"/> <star index="2"/> miał 0 zbiórki</srai></template>
+</category>
+
+<category>
+	<pattern>miał * zbiórkę</pattern>
+	<template><srai>miał <star/> zbiórki</srai></template>
+</category>
+
+<category>
+	<pattern>* * miał * zbiórkę</pattern>
 	<template><srai><star index="1"/> <star index="2"/> miał <star index="3"/> zbiórki</srai></template>
 </category>
 
@@ -354,7 +428,7 @@
 
 <category>
 	<pattern>get</pattern>
-	<template><get name="imie"></get>;<get name="k_imie"></get>;<get name="k_nazwisko"></get>;<get name="asysty"></get>;<get name="punkty"></get>;<get name="zbiorki"></get></template>
+	<template><get name="imie"></get>;<get name="k_imie"></get>;<get name="k_nazwisko"></get>;<get name="asysty"></get>;<get name="punkty"></get>;<get name="zbiorki"></get>;<get name="topic"></get></template>
 </category>
 
 <category>
@@ -385,6 +459,11 @@
 <category>
 	<pattern>setPunkty *</pattern>
 	<template><think><set name="punkty"><star/></set></think></template>
+</category>
+
+<category>
+	<pattern>setTemat *</pattern>
+	<template><think><set name="topic"><star/></set></think></template>
 </category>
 
 </aiml>

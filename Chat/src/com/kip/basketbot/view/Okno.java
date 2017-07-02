@@ -77,11 +77,12 @@ public class Okno {
 		textField.setBorder(new LineBorder(new Color(0, 0, 0)));
 		textField.setColumns(10);
 
-		btnWyslij = new JButton("WYŚLIJ");
+		btnWyslij = new JButton("");
+		btnWyslij.setIcon(new ImageIcon(Okno.class.getResource("/com/kip/basketbot/resources/button.png")));
 		btnWyslij.setFont(new Font("Segoe Print", Font.BOLD, 14));
 		btnWyslij.setForeground(new Color(0, 0, 0));
 		btnWyslij.setBorder(new LineBorder(new Color(0, 0, 0)));
-		btnWyslij.setBackground(new Color(204, 102, 51));
+		btnWyslij.setBackground(new Color(248, 182,94));
 		btnWyslij.setFocusPainted(false);
 		
 		
@@ -117,6 +118,8 @@ public class Okno {
 							chatSession.multisentenceRespond("setAsysty" + values[3]);
 							chatSession.multisentenceRespond("setPunkty" + values[4]);
 							chatSession.multisentenceRespond("setZbiorki" + values[5]);
+							chatSession.multisentenceRespond("setTemat" + values[6]);
+
 							textArea.setText(chat + "\nBot: " + "Dziękuję!");
 							flag = false;
 						} catch (IOException e) {
@@ -141,8 +144,9 @@ public class Okno {
 								if (request.charAt(i) != '?' && request.charAt(i) != '!' && request.charAt(i) != '.'&& request.charAt(i) != ';' && request.charAt(i) != '*'&& request.charAt(i) != '@' && request.charAt(i) != '%'&& request.charAt(i) != '"')
 									sb.append(request.charAt(i));
 							}
-							pattern = sb.toString();
-	
+						pattern = sb.toString();
+						
+						
 						//jezeli ma uzyc logiki rozmytej w celu udzielenia odpowiedzi
 						}else if(response.equals("ocena koszykarza")) {
 							String get=chatSession.multisentenceRespond("get");
@@ -216,13 +220,13 @@ public class Okno {
 			groupLayout.createParallelGroup(Alignment.LEADING)
 				.addGroup(groupLayout.createSequentialGroup()
 					.addContainerGap()
-					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+					.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
 						.addGroup(groupLayout.createSequentialGroup()
 							.addComponent(textField, GroupLayout.DEFAULT_SIZE, 297, Short.MAX_VALUE)
 							.addGap(18)
 							.addComponent(btnWyslij, GroupLayout.PREFERRED_SIZE, 77, GroupLayout.PREFERRED_SIZE)
 							.addGap(21))
-						.addGroup(Alignment.TRAILING, groupLayout.createSequentialGroup()
+						.addGroup(groupLayout.createSequentialGroup()
 							.addGroup(groupLayout.createParallelGroup(Alignment.TRAILING)
 								.addComponent(lblNewLabel, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 403, Short.MAX_VALUE)
 								.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 403, Short.MAX_VALUE))
@@ -234,11 +238,14 @@ public class Okno {
 					.addContainerGap()
 					.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 83, GroupLayout.PREFERRED_SIZE)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-					.addGap(18)
-					.addGroup(groupLayout.createParallelGroup(Alignment.BASELINE)
-						.addComponent(textField, GroupLayout.PREFERRED_SIZE, 43, GroupLayout.PREFERRED_SIZE)
-						.addComponent(btnWyslij, GroupLayout.PREFERRED_SIZE, 30, GroupLayout.PREFERRED_SIZE))
+					.addComponent(scrollPane, GroupLayout.DEFAULT_SIZE, 180, Short.MAX_VALUE)
+					.addGroup(groupLayout.createParallelGroup(Alignment.LEADING)
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(18)
+							.addComponent(btnWyslij))
+						.addGroup(groupLayout.createSequentialGroup()
+							.addGap(29)
+							.addComponent(textField, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)))
 					.addGap(26))
 		);
 
